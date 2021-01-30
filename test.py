@@ -5,7 +5,7 @@ def main():
 
 def sum(x,y):
     z = x + y
-    return 2
+    return z
     
 
 main()
