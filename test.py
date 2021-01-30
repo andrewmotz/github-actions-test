@@ -2,6 +2,7 @@
 
 def main():
     print("Hello world")
+    assert 1 == 1
     methOne()
 
 def methOne():
