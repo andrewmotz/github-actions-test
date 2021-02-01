@@ -2,7 +2,7 @@ name: workflowtest
 on: [push]
 
 jobs:
-  check-bats-version:
+  python-tests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
