@@ -1,8 +1,13 @@
-name: workflowtest
-on: [push]
+name: Automated Tests
+
+on:
+  pull_request:
+    branches:
+      - master
+      - 'user/**'
 
 jobs:
-  check-bats-version:
+  python-tests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -13,6 +18,7 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest
-        pytest
+        pip install pytest-cov
+        pytest --cov=test
       
       
