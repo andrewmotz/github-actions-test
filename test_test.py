@@ -15,5 +15,8 @@ def test_divide_by_zero() -> None:
     with pytest.raises(ZeroDivisionError):
         divide(1,0)
 
-def test_subtract_pos():
+def test_subtract_neg():
     assert subtract(2,4) == -2
+
+def test_subtract_pos():
+    assert subtract(4,2) == 2
